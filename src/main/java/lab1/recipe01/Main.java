@@ -1,7 +1,6 @@
 package lab1.recipe01;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 public class Main {
@@ -49,8 +48,6 @@ public class Main {
                     finish = finish && (threads[i].getState() == Thread.State.TERMINATED);
                 }
             }
-        }catch (IOException e){
-            System.err.println("IOException: " + e.getMessage());
         }catch (Exception e) {
             e.printStackTrace();
         }
