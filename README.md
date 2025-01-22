@@ -1,7 +1,7 @@
 # COS6012-B_2024-5_SEM2_BDA: Concurrent and Distributed Systems
 Welcome to my repository for the <strong>COS6012-B: Concurrent and Distributed Systems</strong> Software Engineering BEng module at the University of Bradford. <br>
 This repository contains the solutions and code examples for each of the lab sessions, which cover various topics in <strong> concurrent programming </strong> and <strong> distributed systems </strong>. <br> 
-
+The labs focus heavily on the book `Java 9 Concurrency Cookbook` by `Javier Fernández González`. This book was published by `packt` in 2017 and may cover some outdated Java concepts.
 
 ## Module Overview
 <strong> Course Code: </strong> COS6012-B <br>
