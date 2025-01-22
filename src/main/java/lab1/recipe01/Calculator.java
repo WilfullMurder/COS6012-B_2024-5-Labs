@@ -1,4 +1,4 @@
-package recipe01;
+package lab1.recipe01;
 
 public class Calculator implements Runnable{
 
