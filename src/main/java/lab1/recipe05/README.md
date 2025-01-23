@@ -35,6 +35,3 @@ This ensures that the main thread waits for both the `DataSourceLoader` and `Net
 ## Usage
 To run the program, execute the `Main` class.
 The program will start two threads that simulate loading data from different sources and wait for both threads to complete before exiting.
-
-
-## Usage
