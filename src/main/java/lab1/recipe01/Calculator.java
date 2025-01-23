@@ -27,7 +27,7 @@ public class Calculator implements Runnable{
      * @param number The number to check for primality
      * @return true if the number is prime, false otherwise
      */
-    private boolean isPrime(long number) {
+    boolean isPrime(long number) {
         // Handle the case where number is less than 2
         if (number <= 1) {
             return false;
