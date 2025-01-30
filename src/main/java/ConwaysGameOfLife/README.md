@@ -51,6 +51,11 @@ and each subdomain is processed independently by a separate thread.
 This allows multiple threads to work on different parts of the grid simultaneously, 
 leading to faster updates and better performance.
 
+Below is an example of how the rows could be assigned to threads on a dual-core processor.
+
+![Domain Decomposition Flowchart](https://github.com/user-attachments/assets/530e8ade-6e24-4f1c-89e0-df3de95dd50d)
+
+
 ### Benefits of Concurrency
 - **Improved Performance:** By updating multiple rows of the grid concurrently, 
 the program can complete the update process faster, 
