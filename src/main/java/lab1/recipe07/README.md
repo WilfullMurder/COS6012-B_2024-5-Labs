@@ -1,6 +1,11 @@
-# Processing Uncontrolled Exceptions in a Thread
+# Recipe 07: Processing Uncontrolled Exceptions in a Thread
 
-An essential feature in every programming language is the mechanism for handling error situations in applications. The Java programming language, like most modern languages, uses an exception-based system to manage errors. Java classes throw exceptions when an error is detected. Developers can also use these exceptions or create custom exceptions to handle errors in their classes.
+Handling error situations is crucial in any programming language. 
+Java, like most modern languages, uses an exception-based mechanism to manage errors. 
+Exceptions are thrown by Java classes when an error is detected, and developers can also create custom exceptions to handle specific error scenarios.
+Java distinguishes between checked exceptions, which must be caught or declared in the method signature, and unchecked exceptions, which do not need to be specified or caught.
+When a checked exception is thrown inside the `run()` method of a thread, it must be caught and handled because the `run()` method cannot declare exceptions.
+Unchecked exceptions, on the other hand, will cause the program to print the stack trace to the console and terminate. Java provides a mechanism to catch and handle unchecked exceptions in threads to prevent the program from ending unexpectedly. This recipe demonstrates this mechanism with an example.
 
 ## Files
 
@@ -43,3 +48,4 @@ To run the program, execute the `Main` class. The program will start a thread th
 
 - The `Thread.UncaughtExceptionHandler` interface is a functional interface, so it can be implemented as a lambda expression.
 - This example demonstrates handling unchecked exceptions in a thread to prevent the program from terminating unexpectedly.
+- For more information on thread management and synchronization, refer to "Java Concurrency in Practice" by Brian Goetz and "Effective Java" by Joshua Bloch.

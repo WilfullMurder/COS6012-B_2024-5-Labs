@@ -1,10 +1,11 @@
-# Using Thread-Local Variables
+# Recipe 08: Using Thread Local Variables
 
 ## Overview
-
-Handling shared data correctly is one of the biggest challenges in concurrent programming. When multiple threads operate on the same object, changes made by one thread can unexpectedly affect others, leading to unpredictable behavior.
-
-In some cases, it's necessary for each thread to maintain its own separate copy of a variable. Java provides a solution for this through **thread-local variables**, which ensure that each thread has an independent instance of a variable rather than sharing it with others. While this approach improves performance and avoids synchronization issues, it also has drawbacks—such as the persistence of values for as long as the thread exists, which can lead to problems when threads are reused.
+In concurrent applications, managing shared data is crucial, especially when dealing with objects that extend the `Thread` class or implement the `Runnable` interface.
+When multiple threads share the same `Runnable` object, they also share its attributes, leading to potential data corruption and unpredictable behavior. 
+To address this, Java provides thread-local variables, which ensure that each thread has its own independent instance of a variable. 
+This approach improves performance and avoids synchronization issues, although it has drawbacks, such as retaining values for the lifetime of the thread, which can be problematic when threads are reused. 
+This recipe demonstrates the use of thread-local variables to solve shared data issues.
 
 ## Files
 - `Main.java` – The entry point that demonstrates the difference between an **unsafe shared variable** and a **thread-local variable**.
@@ -47,3 +48,8 @@ To run the program, execute the `Main` class. The program first runs the `Unsafe
 
 The output will demonstrate the difference between the two approaches, highlighting how `ThreadLocal` provides thread safety.  
 
+## Notes
+
+- The `ThreadLocal` class provides methods such as `set()`, `get()`, and `remove()` to manage thread-local variables.
+- Proper use of thread-local variables can significantly improve the performance and reliability of concurrent applications.
+- For more information on thread management and synchronization, refer to "Java Concurrency in Practice" by Brian Goetz and "Effective Java" by Joshua Bloch.
