@@ -37,7 +37,6 @@ This mechanism can also be applied to process uncaught exceptions thrown by a th
    - Prints the number of active threads and their states.
 
 ## Why it Works
-## Why it Works
 When an uncaught exception is thrown in a `Thread` object, 
 the JVM searches for three possible handlers for this exception. 
 Initially, it looks for the uncaught exception handler of the thread. 
