@@ -18,3 +18,11 @@ This lab presents a number of recipes that demonstrate how to use the two basic 
 - The `Lock` interface and its implementations: Provides more flexible and sophisticated synchronization capabilities compared to the `synchronized` keyword.
 
 By using these mechanisms, you can prevent race conditions and ensure that changes made by one thread are visible to others, maintaining data consistency and correctness in concurrent applications.
+
+
+## Recipe Packages
+
+### Recipe 01: Synchronizing a method
+### Recipe 02: Using conditions in synchronized code
+### Recipe 03: Synchronizing a block of code with a lock
+### Recipe 04: Synchronizing data access with read/write locks
