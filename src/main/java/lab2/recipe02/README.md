@@ -26,13 +26,13 @@ In this recipe, you will learn how to implement the producer-consumer problem us
    - Sets up the producer and consumer threads and starts them.
 ## Why it Works
 The `synchronized` keyword ensures that only one thread can execute a synchronized method or block at a time, using the object reference as a lock. 
-The `wait()` method manages the conditions for accessing the buffer, ensuring that producers wait when the buffer is full and consumers wait when the buffer is empty. 
+The `wait()` and `notify()` methods manage the conditions for accessing the buffer, ensuring that producers wait when the buffer is full and consumers wait when the buffer is empty. 
 This prevents race conditions and ensures data consistency.
 ## Usage
 To run the program, execute the `Main` class. The producer and consumer threads will start, demonstrating the correct handling of the producer-consumer problem using synchronization and condition management.
 ## Notes
 - The `synchronized` keyword can be used with methods or blocks of code.
-- The `wait()` method must be called within synchronized blocks.
+- The `wait()`, `notify()`, and `notifyAll()` methods must be called within synchronized blocks.
 - Proper synchronization and condition management are crucial to prevent data corruption and ensure consistency in concurrent applications.
 - For more information on thread synchronization, refer to "Java Concurrency in Practice" by Brian Goetz and "Effective Java" by Joshua Bloch.
 
